@@ -50,7 +50,7 @@ def fetch_top_story_ids():
     try:
         response = requests.get(TOP_STORIES_URL, headers=headers)
         response.raise_for_status()
-        return response.json()[:500]
+        return response.json()[:1000]
     except Exception as e:
         print("Failed to fetch top stories:", e)
         return []
